@@ -5,7 +5,6 @@ gpt-2 metin uretimi calismasi
 llama
 """
 
-# import libraries
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 from transformers import AutoTokenizer, AutoModelForCausalLM # llama
 
@@ -29,14 +28,14 @@ text = "Afternoon, "
 inputs = tokenizer.encode(text, return_tensors="pt")
 inputs_llama = tokenizer_llama(text, return_tensors="pt") # llama
 
-# metin uretimi gerceklestirelim
+# metin uretimi gerceklestirme 
 outputs = model.generate(inputs, max_length = 55) # inputs = modelin baslangic noktasi, max_length maximum token sayisi
 outputs_llama = model_llama.generate(inputs_llama.input_ids, max_length = 55) # llama
 
-# modelin urettigi tokenlari okunabilir hale getirmemiz lazim
+# modelin urettigi tokenlari okunabilir hale getirilmesi
 generated_text = tokenizer.decode(outputs[0], skip_special_tokens=True) # ozel tokenleri (orn: cumle baslangic bitis tokenleri) metinden cikart
 generated_text_llama = tokenizer.decode(outputs[0], skip_special_tokens=True) # llama
-# uretilen metni print ettirelim
+
 print(generated_text)
 print(generated_text_llama)
 
