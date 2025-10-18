@@ -3,7 +3,6 @@
 varlik ismi tanima: metin (cumle) -> metin icerisinde bulunan varlik isimlerini tanimla
 """
 
-# import libraries
 import pandas as pd
 import spacy
 

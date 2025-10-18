@@ -18,7 +18,7 @@ print(data.isna().sum())
 
 import nltk 
 
-nltk.download("stopwords") # cok kullanilan v eanlam tasimayan sozcukleri metin icerisinden cikartalim
+nltk.download("stopwords") # cok kullanilan ve anlam tasimayan sozcukleri metin icerisinden cikartalim
 nltk.download("wordnet") # lemma bulmak icin gerekli olan veriseti
 nltk.download("omw-1.4") # wordnete ait farkli dillerin kelime anlamlarini iceren bir veri seti
 
