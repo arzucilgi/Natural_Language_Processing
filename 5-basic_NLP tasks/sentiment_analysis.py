@@ -6,7 +6,6 @@ problem tanimi ve veriseti:
     binary classification problemi
 """
 
-# import libraries
 import pandas as pd
 import nltk
 
@@ -21,7 +20,6 @@ nltk.download("punkt")
 nltk.download("wordnet")
 nltk.download("omw-1.4")
 
-# veri seti yukle
 df = pd.read_csv("duygu_analizi_amazon_veri_seti.csv")
 
 # text cleaning ve preprocessing
